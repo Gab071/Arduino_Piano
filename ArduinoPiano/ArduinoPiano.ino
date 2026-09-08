@@ -11,7 +11,7 @@
 #define SwGreen 4
 
 void ReadStateOfTheButtons();
-void PlayTone(int index)
+void PlayTone(int index);
 
 const int LedAmount = 4;
 const int Tones[LedAmount] = {NOTE_C3, NOTE_E3, NOTE_G3, NOTE_C4};
