@@ -11,13 +11,13 @@
 #define SwGreen 4
 
 void ReadStateOfTheButtons();
-void PlayTone(int index);
+void PlayTone( index);
 
-const int LedAmount = 4;
-const int Tones[LedAmount] = {NOTE_C3, NOTE_E3, NOTE_G3, NOTE_C4};
+const uint8_t LedAmount = 4;
+const uint8_t Tones[LedAmount] = {NOTE_C3, NOTE_E3, NOTE_G3, NOTE_C4};
 
-const int Leds[LedAmount] = {LedBlue, LedRed, LedYellow, LedGreen};
-const int Buttons[LedAmount] = {SwBlue, SwRed, SwYellow, SwGreen};
+const uint8_t Leds[LedAmount] = {LedBlue, LedRed, LedYellow, LedGreen};
+const uint8_t Buttons[LedAmount] = {SwBlue, SwRed, SwYellow, SwGreen};
 
 void setup() 
 {
@@ -39,9 +39,9 @@ void loop()
 }
 
 // Function that plays corresponding Tone
-void PlayTone(int index)
+void PlayTone(uint8_t index)
 {
-  if(index >=0 && index <= 4)
+  if(index >=0 && index < 4)
   {
     digitalWrite(Leds[index], HIGH);
     tone(Buzzer, Tones[index], 250);
@@ -57,7 +57,7 @@ void PlayTone(int index)
 // if yes - then it plays a tone and turns on appropriate LED 
 void ReadStateOfTheButtons()
 {
-  for(int sw=0; sw<LedAmount; sw++)
+  for(uint8_t sw=0; sw<LedAmount; sw++)
   {
     if(digitalRead(Buttons[sw]) == LOW)
     {
