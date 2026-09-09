@@ -64,10 +64,6 @@ void ReadStateOfTheButtons()
     {
       PlayTone(sw);
     }
-    else
-    {
-      continue;
-    }
   }
 }
 
