@@ -1,6 +1,6 @@
 # Arduino_Piano
 
-## Table of contents
+## Table of Contents
 
 1. [Overview](#overview)
 2. [Hardware Components](#hardware-components)
