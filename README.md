@@ -1,4 +1,4 @@
-# Arduino_Piano
+# Arduino Piano
 
 ## Table of Contents
 
